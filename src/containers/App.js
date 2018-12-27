@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import '../App.css';
 import Navbar from '../components/Navbar'
-import bootstrap from 'react-bootstrap'
 import Home from '../components/Home'
+import Games from './Games'
 
 class App extends Component {
   render() {
@@ -12,7 +12,8 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route exact path='/' comoponent={Home} />
+            <Route exact path = '/' component={Home} />
+            <Route exact path = '/games' component={Games} />
           </Switch>
         </div>
       </Router>
