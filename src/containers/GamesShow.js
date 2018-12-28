@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import GamePage from '../components/GamePage'
 
-const GameShow = {(games)} => {
+const GameShow = ({game}) => {
     return(
         <div className="GameShow">
             <GamePage game={game} />
