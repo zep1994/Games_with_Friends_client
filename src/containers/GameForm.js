@@ -6,7 +6,7 @@ class GameForm extends Component {
         return(
             <div> 
                 Add a new game to the List
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleOnSubmit}>
                     <div>
                         <label htmlFor="name">Name:</label>
                     </div>
