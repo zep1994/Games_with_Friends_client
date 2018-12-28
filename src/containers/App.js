@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import Home from '../components/Home'
 import Games from './Games'
 import GamesShow from './GamesShow';
+import GameForm from './GameForm';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route exact path = '/' component={Home} />
             <Route exact path = '/games' component={Games} />
             <Route exact path = '/games/:id' component={GamesShow} />
+            <Route exact path = '/games/new' component={GameForm} />
           </Switch>
         </div>
       </Router>
