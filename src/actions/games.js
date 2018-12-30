@@ -38,7 +38,7 @@ export const createGame = (game, routerHistory) => {
         .then(game => {
             dispatch(addGame(game))
             dispatch(resetGameForm())
-            routerHistory.replace(`/games/${game.id}`)
+            routerHistory.replace(`/games`)
         })
         .catch(error => {
             dispatch({type: 'ERROR'})
