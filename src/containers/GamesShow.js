@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import GamePage from '../components/GamePage'
 import { Button } from 'react-bootstrap'
+import { deleteGame } from '../actions/games'
 
-const GameShow = ({game}) => {
-    return(
-        <div className="GameShow">
-            <GamePage game={game} />
-            <Button bsStyle="danger">Delete {game.name} </Button>
-        </div>
-    )
+class GameShow extends Component {
+
+    handleOnClick = (event, gameID, history) => {
+        event.preventDefault()
+        deleteGame(gameID, history)
+    }
+
+    render() {
+        const { game, history } = this.props
+        return(
+            <div className="GameShow">
+                <GamePage game={game} />
+                <Button onClick={(e) => this.handleOnClick(e, game.id, history)} bsStyle="danger">Delete {game.name} </Button>
+            </div>
+        )
+    }
+   
 }
 
 const mapStateToProps = (state, newProps) => {
