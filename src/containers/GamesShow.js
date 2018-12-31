@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import GamePage from '../components/GamePage'
+import { Button } from 'react-bootstrap'
 
 const GameShow = ({game}) => {
     return(
         <div className="GameShow">
             <GamePage game={game} />
+            <Button bsStyle="danger">Delete {game.name} </Button>
         </div>
     )
 }

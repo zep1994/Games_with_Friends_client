@@ -43,7 +43,7 @@ class GameForm extends Component {
                     </div>
                     <div>
                         <label htmlFor="directions">Directions:</label>
-                        <input type='textarea'
+                        <textarea type='textarea'
                                onChange={this.handleOnChange}
                                name='directions'
                                value={directions} />
