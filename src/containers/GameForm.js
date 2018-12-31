@@ -43,16 +43,16 @@ class GameForm extends Component {
                     </div>
                     <div>
                         <label htmlFor="directions">Directions:</label>
-                        <input type='text'
+                        <input type='textarea'
                                onChange={this.handleOnChange}
-                               directions='directions'
+                               name='directions'
                                value={directions} />
                     </div>
                     <div>
-                    <label htmlFor="imgage_url">Image URL:</label>
+                    <label htmlFor="image_url">Image URL:</label>
                         <input type='text'
                                onChange={this.handleOnChange}
-                               name='imgage_url'
+                               name='image_url'
                                value={image_url} />
                     </div>
                     <Button type="submit" bsStyle='primary'>Submit</Button>
