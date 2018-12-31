@@ -25,6 +25,13 @@ export const addGame = game => {
     }
 }
 
+export const removeGame = game => {
+    return{
+        type: 'REMOVE_GAME',
+        game
+    }
+}
+
 export const createGame = (game, routerHistory) => {
     return dispatch => {
         return fetch(`${API_URL}/games`, {
@@ -45,4 +52,18 @@ export const createGame = (game, routerHistory) => {
             routerHistory.replace(`/games/new`)
         })
     }
+}
+
+export const deleteGame = (gameID, routerHistory) => {
+    const req = new Request(`${API_URL}/games/${gameID}`, {
+        method: 'DELETE'
+    })
+
+    return fetch(req)
+    .then(res => {
+        removeGame(gameID)
+        routerHistory.replace('/games')
+    }).catch(error => {
+        return error
+    })
 }
