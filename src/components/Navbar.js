@@ -4,7 +4,7 @@ import { Navbar as BNav, Nav, NavItem } from "react-bootstrap";
 
 const Navbar = () => {
     return (
-        <BNav>
+        <BNav className="mySidenav">
             <BNav.Header>
                 <BNav.Brand>
                     <Link to='/' exact>Drinking Game</Link>
