@@ -6,10 +6,6 @@ import { Link } from 'react-router-dom'
 
 class Games extends Component {
 
-    componentDidMount() {
-        this.props.getGames()
-    }
-
     render() {
         return (
             <div className="GameContainer">
