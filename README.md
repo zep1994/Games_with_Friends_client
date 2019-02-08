@@ -2,6 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+
+*********************************************
+LINK TO RAILS SIDE
+https://github.com/zep1994/Games_with_friends
+
+*********************************************
+
 In the project directory, you can run:
 
 ### `npm start`
