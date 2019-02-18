@@ -8,11 +8,14 @@ import GamesShow from './GamesShow';
 import GameForm from './GameForm';
 import About from '../components/About';
 
-componentDidMount() {
-        this.props.getGames()
-    }
+
 
 class App extends Component {
+        
+    componentDidMount() {
+        this.props.getGames()
+    }
+        
   render() {
     return (
       <Router>
